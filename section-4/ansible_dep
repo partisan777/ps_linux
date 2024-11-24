@@ -1,0 +1,28 @@
+max@ws01:~/linux-vm/4$ apt show ansible
+Package: ansible
+Version: 9.2.0+dfsg-0ubuntu5
+Priority: optional
+Section: universe/admin
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Lee Garrett <debian@rocketjump.eu>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 294 MB
+### Зависимости
+Depends: ansible-core (>= 2.16.3), python3:any, openssh-client | python3-paramiko (>= 2.6.0), python3-dnspython, python3-httplib2, python3-jinja2, python3-netaddr, python3-yaml
+Recommends: python3-argcomplete, python3-cryptography, python3-jmespath, python3-kerberos, python3-libcloud, python3-selinux, python3-winrm, python3-xmltodict
+###
+Suggests: cowsay, python3-jsonschema, sshpass
+Breaks: ansible-base (<= 2.10.5+dfsg-2)
+Replaces: ansible-base (<= 2.10.5+dfsg-2)
+Homepage: https://www.ansible.com
+Download-Size: 16.4 MB
+APT-Sources: http://nl.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+Description: Configuration management, deployment, and task execution system
+ Ansible is a radically simple model-driven configuration management,
+ multi-node deployment, and remote task execution system. Ansible works
+ over SSH and does not require any software or daemons to be installed
+ on remote nodes. Extension modules can be written in any language and
+ are transferred to managed machines automatically.
+ .
+ This package contains the ansible collections.

@@ -1,0 +1,40 @@
+### Ошибка
+
+Selecting previously unselected package tor.
+(Reading database ... 192287 files and directories currently installed.)
+Preparing to unpack tor_0.3.2.10-1_amd64.deb ...
+Unpacking tor (0.3.2.10-1) ...
+dpkg: dependency problems prevent configuration of tor:
+ tor depends on libevent-2.1-6 (>= 2.1.8-stable); however:
+  Package libevent-2.1-6 is not installed.
+ tor depends on libssl1.1 (>= 1.1.0); however:
+  Package libssl1.1 is not installed.
+
+dpkg: error processing package tor (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for man-db (2.12.0-4build2) ...
+Errors were encountered while processing:
+ tor
+
+### Причина
+### dpkg не умеет устанавливать зависимости
+
+### Решениe, докачать пакеты и установить
+
+sudo -i wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+
+sudo -i wget http://security.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent-2.1-6_2.1.8-stable-4build1_amd64.deb
+sudo dpkg -i libevent-2.1-6_2.1.8-stable-4build1_amd64.deb\
+
+### после установка проходит без ошибок
+max@ws01:~/linux-vm/4$ sudo dpkg -i tor_0.3.2.10-1_amd64.deb
+(Reading database ... 192346 files and directories currently installed.)
+Preparing to unpack tor_0.3.2.10-1_amd64.deb ...
+Unpacking tor (0.3.2.10-1) over (0.3.2.10-1) ...
+Setting up tor (0.3.2.10-1) ...
+Installing new version of config file /etc/apparmor.d/abstractions/tor ...
+Installing new version of config file /etc/init.d/tor ...
+Installing new version of config file /etc/logrotate.d/tor ...
+Installing new version of config file /etc/tor/torrc ...
+Processing triggers for man-db (2.12.0-4build2) ...
