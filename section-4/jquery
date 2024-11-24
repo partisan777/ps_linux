@@ -1,0 +1,14 @@
+### поиск
+max@ws01:~/linux-vm/4$ apt search highlight  jquery
+Sorting... Done
+Full Text Search... Done
+libjs-jquery-datetimepicker/noble 2.5.20+ds-1 all
+  Date and Time Picker plugin for jQuery
+
+libjs-jquery-jush/noble 12-4 all
+  jQuery Syntax Highlighter
+
+max@ws01:~/linux-vm/4$
+
+### установка
+sudo apt install libjs-jquery-jush
