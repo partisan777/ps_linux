@@ -1,0 +1,7 @@
+cd ~
+
+ln -s ~/empty/file777 soft_link
+
+max@ws01:~$ cat soft_link
+You got me!
+max@ws01:~$

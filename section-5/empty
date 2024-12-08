@@ -1,0 +1,2 @@
+max@ws01:~/empty$ grep -R 'You got me!' /home/max/empty/
+/home/max/empty/file777:You got me!
