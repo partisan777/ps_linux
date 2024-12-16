@@ -1,0 +1,3 @@
+sudo useradd -p PASSWOR alena
+
+alena:x:1002:1002::/home/alena:/bin/sh
