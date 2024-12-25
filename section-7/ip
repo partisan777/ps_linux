@@ -1,0 +1,1 @@
+sudo ifconfig enp0s8 172.20.236.10/24 netmask 255.255.255.0.
