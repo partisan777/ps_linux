@@ -1,0 +1,5 @@
+mkdir /mnt/tmp-data
+
+mount -F tmpfs -o size=500m   swap /mnt/tmp-data
+
+df -h
