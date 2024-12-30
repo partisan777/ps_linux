@@ -1,0 +1,11 @@
+sudo apt install lvm2
+
+sudo pvcreate /dev/vdb
+
+sudo vgcreate volume1 /dev/vdb
+
+mkdir /dev/volume1/storage
+
+sudo mkfs.XFS /dev/mapper/volume1--vg-data /dev/volume1/storage
+
+/dev/disk/by-uuid/fd8184f2-5ff6-4b8a-b67a-5909d4d8b721 / XFS defaults 0 1
