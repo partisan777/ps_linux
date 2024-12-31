@@ -1,0 +1,4 @@
+# узнаем pid
+ps aux | grep ssh
+
+lsof -p 1131
